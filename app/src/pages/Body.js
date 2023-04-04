@@ -1,6 +1,13 @@
+import TrendingItems from "../components/carousel/TrendingItem";
+
+
 const Body = () =>{
     return(
-        <h1>body</h1>
+        <>
+        <TrendingItems/>
+    
+        <h1>product category</h1>
+        </>
     )
     }
     

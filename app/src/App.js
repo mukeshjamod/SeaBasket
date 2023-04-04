@@ -1,6 +1,6 @@
 
 import './App.css';
-import Header from './pages/Header';
+import HeaderPage from './pages/Header';
 import Body from './pages/Body';
 import Footer from './pages/Footer';
 
@@ -8,7 +8,7 @@ import Footer from './pages/Footer';
 function App() {
   return (
   <>
-  <Header></Header>
+  <HeaderPage></HeaderPage>
   <Body></Body>
   <Footer></Footer>
   </>

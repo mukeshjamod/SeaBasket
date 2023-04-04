@@ -1,0 +1,28 @@
+.header{
+    
+    margin: 0;
+    background-color: rgb(18, 18, 50);
+    align-items: center;
+    display: flex;
+    color: aqua;
+    justify-content: space-between; 
+    margin-right: 1px;
+
+    /* z-index: 10;  */
+    
+    /* box-shadow:0 2px 8px burlywood; */
+    opacity:1; 
+}
+
+.search{
+    position:sticky;
+    height: 40px;
+    width: 160px;
+    display: flex;
+}
+
+.header logo{
+    opacity: 50%;
+}
+
+

@@ -1,7 +1,11 @@
-const Header = () =>{
+import Header from "../components/Layout/Header";
+
+const HeaderPage = () =>{
     return(
-        <h1>Header</h1>
+      <>
+      <Header/>
+      </>  
     )
-    }
+    };
     
-    export default Header;
+export default HeaderPage;
