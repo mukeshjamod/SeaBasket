@@ -1,5 +1,6 @@
 export const initialState = {
     cart: [],
+    loginHandler: null,
 }
 
 const cartReducer = (state,action) =>{
@@ -9,10 +10,16 @@ const cartReducer = (state,action) =>{
              ...state,
              cart: [...state.cart, action.item]
          }
+         case 'LOGIN':
+            return {
+                ...state,
+                loginHandler: action.user
+            }
     }
+
+}
+export default cartReducer;
 
     // if(action.type === 'ADD')
     // {const cart = [...state.cart]}
- }
  
- export default cartReducer;
