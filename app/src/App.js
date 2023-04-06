@@ -1,7 +1,6 @@
 
 import './App.css';
 import Login from './components/Layout/Login';
-
 // import Body from './pages/Body';
 // import Footer from './pages/Footer';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
