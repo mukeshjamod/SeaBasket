@@ -1,20 +1,22 @@
 import React from 'react';
 import classes from  './Product.module.css';
+import { useStateValue } from '../../store/CartProvider';
 
 const Product = ({id,title,image,price,rating}) => {
-  // const addToCart = () =>{
-  //   dispatchEvent({
-  //   type: 'ADD_TO_CART',
-  //   item: {
-  //     id: id,
-  //     title:title,
-  //     image:image,
-  //     price:price,
-  //     rating:rating
-  //   }
-  //   })
+  const [{cart}, dispatch] = useStateValue();
+  const addToCart = () =>{
+    dispatch({
+    type: 'ADD',
+    item: {
+      id: id,
+      title:title,
+      image:image,
+      price:price,
+      rating:rating
+    }
+    })
     
-  // }
+  }
   return (
     <div className={classes.product}>
         <div className={classes.info}>
@@ -34,7 +36,7 @@ const Product = ({id,title,image,price,rating}) => {
             </div>
         </div>
         <img src={image} alt="product" />
-        <button  >Add to Cart</button>
+        <button onClick={addToCart} >Add to Cart</button>
     </div>
   )
 }
