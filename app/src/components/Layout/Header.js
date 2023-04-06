@@ -2,9 +2,14 @@ import { Link } from 'react-router-dom';
 import logo from '../images/logo.png';
 import classes from './Header.module.css';
 import { FaBeer, FaShoppingCart } from 'react-icons/fa';
+import { useStateValue } from '../../store/CartProvider';
 
 
      function Header() {
+      const [{cart}, dispatch] = useStateValue();
+
+      console.log("my cart", cart);
+      
     return (
     <nav className={classes.header}>
       <div className={classes.logo}>
@@ -29,7 +34,7 @@ import { FaBeer, FaShoppingCart } from 'react-icons/fa';
         <Link>
          <div className={classes.icon}>
           <FaShoppingCart />
-          <span className={classes.count}>2</span>
+          <span className={classes.count}>{cart.length}</span>
          </div>
      
         </Link>
