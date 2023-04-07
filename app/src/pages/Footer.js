@@ -4,6 +4,7 @@ import React from 'react';
 
 import classes from './Footer.module.css';
 import FooterPage from '../modal/Footer';
+import FooterEndPage from '../modal/FooterEndPage';
 function Footer() {
   return (
     // <FooterPage></FooterPage>
@@ -15,6 +16,7 @@ function Footer() {
       <div className={classes.down}> 
         <div>
          <FooterPage></FooterPage>
+         <FooterEndPage/>
         </div>
           
       </div>
