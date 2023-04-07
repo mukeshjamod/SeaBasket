@@ -3,13 +3,18 @@ import logo from '../images/logo.png';
 import classes from './Header.module.css';
 import { FaBeer, FaShoppingCart } from 'react-icons/fa';
 import { useStateValue } from '../../store/CartProvider';
-
+import {auth } from '../../Firebase';
 
      function Header() {
-      const [{cart}, dispatch] = useStateValue();
+      const [{cart,user}, dispatch] = useStateValue();
 
-      console.log("my cart", cart);
-      
+      // console.log("my cart", cart);
+      const logoutUSer = () =>{
+        if(user){
+          auth.signOut();
+        }
+      };
+
     return (
     <nav className={classes.header}>
       <div className={classes.logo}>
@@ -23,11 +28,11 @@ import { useStateValue } from '../../store/CartProvider';
       
       <br/>
       <div><FaBeer/></div>
-      <Link to='/' className={classes.link}>
-      <div className={classes.option}> 
-      <span>Hello,user</span>
+      <Link to={!user && "/login"} className={classes.link}>
+      <div onClick={logoutUSer} className={classes.option}> 
+      <span>Hello , {user}</span>
       <span>
-        sign in
+        {user ? 'signout' : 'sign in'}
       </span>
         </div>
         </Link>
