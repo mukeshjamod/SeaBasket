@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import logo from '../images/logo.png';
 import classes from './Header.module.css';
 import { FaBeer, FaShoppingCart } from 'react-icons/fa';
@@ -9,6 +9,10 @@ import { useStateValue } from '../../store/CartProvider';
       const [{cart}, dispatch] = useStateValue();
 
       console.log("my cart", cart);
+
+      function cartIconHandler (){
+        Navigate('/checkout');
+      }
       
     return (
     <nav className={classes.header}>
@@ -31,7 +35,7 @@ import { useStateValue } from '../../store/CartProvider';
       </span>
         </div>
         </Link>
-        <Link>
+        <Link onClick={cartIconHandler}>
          <div className={classes.icon}>
           <FaShoppingCart />
           <span className={classes.count}>{cart.length}</span>
