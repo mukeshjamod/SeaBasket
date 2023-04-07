@@ -1,18 +1,19 @@
-import { Link, Navigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
 import logo from '../images/logo.png';
 import classes from './Header.module.css';
-import { FaBeer, FaShoppingCart } from 'react-icons/fa';
+import { FaBeer,FaSearch, FaShoppingCart } from 'react-icons/fa';
 import { useStateValue } from '../../store/CartProvider';
 
 
      function Header() {
       const [{cart}, dispatch] = useStateValue();
+      // const Navigate = useNavigate();
 
       console.log("my cart", cart);
 
-      function cartIconHandler (){
-        Navigate('/checkout');
-      }
+      // function cartIconHandler (){
+      //   Navigate('/checkout');
+      // }
       
     return (
     <nav className={classes.header}>
@@ -21,7 +22,8 @@ import { useStateValue } from '../../store/CartProvider';
        </div>
        <div className={classes.search}>
         <input type="text" placeholder="Search products" />
-        <button type="submit">Search</button>
+        {/* <button type="submit">Search</button> */}
+        <FaSearch size={5} color={'green'}/>
       </div>
        
       
@@ -35,7 +37,7 @@ import { useStateValue } from '../../store/CartProvider';
       </span>
         </div>
         </Link>
-        <Link onClick={cartIconHandler}>
+        <Link to='/checkout'>
          <div className={classes.icon}>
           <FaShoppingCart />
           <span className={classes.count}>{cart.length}</span>

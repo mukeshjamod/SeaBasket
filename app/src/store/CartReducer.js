@@ -15,6 +15,16 @@ const cartReducer = (state,action) =>{
                 ...state,
                 loginHandler: action.user
             }
+
+            case 'REMOVE':
+                let newcart = [...state.cart]
+                const index = state.cart.findIndex((cartItem)=>cartItem.id ===action.id)
+                if(index >= 0){
+                    newcart.splice(index,1)
+                }
+                else{console.log('these were errors while removing product from cart')
+            }
+            return {...state, cart:newcart}
     }
 
 }
