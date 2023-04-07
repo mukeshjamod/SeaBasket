@@ -1,12 +1,19 @@
 import React from 'react';
 import Subtotal from './Subtotal';
 import classes from './Checkout.module.css';
+<<<<<<< HEAD
 import CartItem from './CartItem';
 import { useStateValue } from '../../store/CartProvider';
 
 const Checkout = () => {
 
   const [{cart}] = useStateValue();
+=======
+
+
+const Checkout = () => {
+
+>>>>>>> feature/authentication
   return (
     <div className={classes.checkout}>
         <div className={classes.left}>
