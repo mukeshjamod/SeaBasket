@@ -1,0 +1,14 @@
+.footer{
+    background-color: black;
+    width: 100%;
+    min-height: 200px;
+    color: antiquewhite;
+}
+
+.top{
+    background-color: darkblue;
+    min-width:60px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
