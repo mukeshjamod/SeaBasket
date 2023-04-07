@@ -25,4 +25,25 @@
     opacity: 50%;
 }
 
+.link{
+    color: azure;
+    text-decoration: none;
+}
+.option{
+    display: flex;
+    flex-direction: column;
+    margin-left:10px ;
+    margin-right: 10px;
+}
+
+.icon{
+    display: flex;
+    align-items: center;
+}
+
+.count{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 
