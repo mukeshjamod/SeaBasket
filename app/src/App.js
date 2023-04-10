@@ -7,31 +7,40 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import RootLayout from './pages/Root';
 import Checkout from './components/Cart/Checkout';
+import Payment from './components/Cart/Payment';
 
 
 function App() {
+
+  
+
   return (<><Router>
     <Routes>
       <Route path='/' element={<RootLayout/>}>
         <Route path='/' element={<Home/>}/>
        
           <Route path='/login' element={<Login />} />
-          <Route path='/checkout' element={<Checkout/>}/>
+          <Route path='/checkout' element={<Checkout/>}>
+            <Route path='./payment' element={<Payment/>}/>
+            
+      
+            </Route>
       
       </Route>
 
     </Routes>
-
-
-
-
   </Router>
+
+  
     {/* <Body></Body> */}
 
   </>
 
 
   );
+
 }
 
 export default App;
+
+
