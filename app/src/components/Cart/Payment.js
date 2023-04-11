@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 
-const Payment = () => {
+const Checkout = () => {
   const [paymentOption, setPaymentOption] = useState('');
-
-  console.log('jay');
 
   const handlePaymentOptionChange = (event) => {
     setPaymentOption(event.target.value);
@@ -59,10 +57,10 @@ const Payment = () => {
           />
           UPI
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit">Continue</button>
       </form>
     </div>
   );
 };
 
-export default Payment;
+export default Checkout;

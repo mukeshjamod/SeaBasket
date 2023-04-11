@@ -3,7 +3,7 @@ import classes from './Login.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../images/logo1.png';
 import {auth} from '../../Firebase';
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import {createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
 
 const Login = () => {
 
@@ -37,6 +37,14 @@ const Login = () => {
             console.log(user);
         })
         .catch(e=>alert(e.message))
+    };
+
+    const forgotHandler = async(event) =>{
+        event.preventDefault();
+
+        await sendPasswordResetEmail(auth,useremail)
+        .then(()=>alert('password reset email sent successfully'))
+        .catch((e) =>alert(e.message))
     }
     
   return (
@@ -52,6 +60,7 @@ const Login = () => {
             <h5>Password</h5>
             <input value={userpassword} onChange={event => setUserPassword(event.target.value)} type='password'></input>
             <button onClick={loginHandler} type='submit' className={classes.buttonSign}>Sign In</button>
+            <button onClick={forgotHandler} type='forgot' className={classes.buttonSign}>ForgetPassword</button>
         </form>
 
         <p>By signing in, you agree to Seabasket's Terms and Conditons</p>

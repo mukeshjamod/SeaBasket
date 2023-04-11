@@ -2,7 +2,9 @@ import React from 'react';
 import classes from './Subtotal.module.css';
 import { useStateValue } from '../../store/CartProvider';
 import CurrencyFormat from 'react-currency-format';
-import { useNavigate } from 'react-router-dom';
+import { Link, 
+  // useNavigate
+ } from 'react-router-dom';
 
 const Subtotal = () => {
 
@@ -12,15 +14,15 @@ const Subtotal = () => {
 
 
   const [{cart}] = useStateValue();
-    const navigate = useNavigate();
+    // const navigate = useNavigate();
 
 
-  const checkoutHandler = () =>{
+  // const checkoutHandler = () =>{
    
-    navigate('./payment');
+  //   console.log('jay6');
+  //   navigate('./payment');
 
-    console.log('jay6');
-  }
+  // }
 
   return ( <div className={classes.subtotal}>
     <CurrencyFormat 
@@ -34,8 +36,9 @@ const Subtotal = () => {
     thousandSeparator ={true}
     prefix={"$"}
     />
-   
-        <button className={classes.button} onClick={checkoutHandler}>Proceed to Checkout</button>
+   <Link to='/payment'>
+        <button className={classes.button} >Proceed to Checkout</button>
+   </Link>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from  './Product.module.css';
 import { useStateValue } from '../../store/CartProvider';
+import { NavLink } from 'react-router-dom';
 
 const Product = ({id,title,image,price,rating}) => {
   const [{cart}, dispatch] = useStateValue();
@@ -35,7 +36,10 @@ const Product = ({id,title,image,price,rating}) => {
                 }
             </div>
         </div>
+        <NavLink to='/singleProduct'>
+
         <img src={image} alt="product" />
+        </NavLink>
         <button onClick={addToCart} >Add to Cart</button>
     </div>
   )

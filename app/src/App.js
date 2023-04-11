@@ -8,6 +8,10 @@ import Home from './pages/Home';
 import RootLayout from './pages/Root';
 import Checkout from './components/Cart/Checkout';
 import Payment from './components/Cart/Payment';
+import SingleProduct from './components/Product/SingleProduct';
+import Address from './components/Product/Address';
+import Profile from './components/Layout/Profile';
+
 
 
 function App() {
@@ -17,14 +21,18 @@ function App() {
   return (<><Router>
     <Routes>
       <Route path='/' element={<RootLayout/>}>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/singleProduct' element={<SingleProduct/>}/>
+        
        
           <Route path='/login' element={<Login />} />
           <Route path='/checkout' element={<Checkout/>}>
-            <Route path='./payment' element={<Payment/>}/>
+            </Route>
+            <Route path='/payment' element={<Payment/>}/>
+            <Route path='/address' element={<Address/>}/>
+            <Route path='/profile' element={<Profile/>}></Route>
             
       
-            </Route>
       
       </Route>
 
