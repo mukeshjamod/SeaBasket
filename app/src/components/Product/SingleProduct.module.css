@@ -1,0 +1,30 @@
+.single{
+    border: 1px solid red;
+    width: 800px;
+    justify-content:center;
+    margin: auto;
+    background-color: rgb(233, 229, 223);
+}
+.title{
+    text-align: center;
+    margin: 0;
+    padding: 0%;
+    justify-content: space-around;
+
+}
+.rating{
+    text-align: center;
+}
+.price{
+    text-align: center;
+}
+
+.image{
+    width: 180px;
+    height: 180px;
+    margin: 10px;
+    padding: 10px;
+    object-fit: cover;
+   
+
+}

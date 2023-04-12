@@ -11,6 +11,7 @@ import Payment from './components/Cart/Payment';
 import SingleProduct from './components/Product/SingleProduct';
 import Address from './components/Product/Address';
 import Profile from './components/Layout/Profile';
+import ProductListingPage from './components/Product/ProductListingPage';
 
 
 
@@ -21,8 +22,9 @@ function App() {
   return (<><Router>
     <Routes>
       <Route path='/' element={<RootLayout/>}>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/singleProduct' element={<SingleProduct/>}/>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/products/:id' element={<SingleProduct />}/>
+        <Route path='/products/:category' element={<ProductListingPage/>}/>
         
        
           <Route path='/login' element={<Login />} />

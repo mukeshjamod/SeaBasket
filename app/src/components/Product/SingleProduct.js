@@ -1,24 +1,43 @@
 import React from 'react';
-import { useStateValue } from '../../store/CartProvider';
-import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import { products } from '../../pages/Home';
+import classes from './SingleProduct.module.css';
 
 
-const SingleProduct = ({id,image,name,price}) => {
+const ProductPage = ({ product }) => {
 
-   const[{cart}] =useStateValue();
   return (
-    <div>
+    <div className={classes.single}>
+    <>  
+     <img className={classes.image} src={product.image} alt={product.title}></img>
+      <h1 className={classes.title}>{product.title}</h1>
+      <p className={classes.rating}>{product.rating}</p>
+      <p className={classes.price}>price: ${product.price}</p>
    
-      <Link>
-      <img src={image} alt='product'/>
-      </Link>
-      <div><Link>{name}</Link></div>
-      <div>{cart.brand}</div>
-       <div>{price}</div>
-        <div>{cart.rating} </div>
+    </>
     </div>
-        // Stars ({cart.numReviews})</div>
+
+
+
+  );
+};
+
+const SingleProduct = () => {
+
+  const { id } = useParams();
+  const product = products
+    .find((product) => product.id === parseInt(id));
+
+
+  if (!product) {
+    return <div> Loading....</div>
+  }
+
+  return (
+
+    <ProductPage product={product} />
+
   )
-}
+};
 
 export default SingleProduct;

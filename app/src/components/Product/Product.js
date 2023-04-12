@@ -36,7 +36,7 @@ const Product = ({id,title,image,price,rating}) => {
                 }
             </div>
         </div>
-        <NavLink to='/singleProduct'>
+        <NavLink to={`/products/${id}`}>
 
         <img src={image} alt="product" />
         </NavLink>
