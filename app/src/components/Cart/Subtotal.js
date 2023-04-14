@@ -14,15 +14,7 @@ const Subtotal = () => {
 
 
   const [{cart}] = useStateValue();
-    // const navigate = useNavigate();
 
-
-  // const checkoutHandler = () =>{
-   
-  //   console.log('jay6');
-  //   navigate('./payment');
-
-  // }
 
   return ( <div className={classes.subtotal}>
     <CurrencyFormat 

@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import RootLayout from './pages/Root';
 import Checkout from './components/Cart/Checkout';
-import Payment from './components/Cart/Payment';
+import PaymentMethods from './components/Cart/Payment';
 import SingleProduct from './components/Product/SingleProduct';
 import Address from './components/Product/Address';
 import Profile from './components/Layout/Profile';
@@ -30,7 +30,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/checkout' element={<Checkout/>}>
             </Route>
-            <Route path='/payment' element={<Payment/>}/>
+            <Route path='/payment' element={<PaymentMethods/>}/>
             <Route path='/address' element={<Address/>}/>
             <Route path='/profile' element={<Profile/>}></Route>
             
