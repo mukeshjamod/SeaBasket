@@ -30,6 +30,4 @@ const cartReducer = (state,action) =>{
 }
 export default cartReducer;
 
-    // if(action.type === 'ADD')
-    // {const cart = [...state.cart]}
- 
+    
