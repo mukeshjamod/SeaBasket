@@ -40,3 +40,11 @@
     border: 1px solid;
     border-color: chartreuse;
 }
+
+button:hover{
+    color: aquamarine;
+    cursor: pointer;
+}
+
+button:visited{
+color: aliceblue;}
