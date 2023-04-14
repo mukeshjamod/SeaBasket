@@ -1,0 +1,61 @@
+.nav {
+    background-color: rgb(49, 71, 76);
+    color: rgb(245, 247, 247);
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left {
+    margin-left: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.left>.menu {
+    color: rgb(242, 233, 233)
+}
+
+.deals {
+    color: rgb(248, 253, 252);
+    text-decoration: none;
+    margin-right: 6px;
+}
+
+.seller {
+    color: rgb(248, 253, 252);
+    text-decoration: none;
+}
+
+.mobile{
+    color: rgb(248, 253, 252);
+    text-decoration: none;
+}
+.electronic
+{
+    color: rgb(248, 253, 252);
+    text-decoration: none; 
+}
+.book{
+    color: rgb(248, 253, 252);
+    text-decoration: none;
+}
+
+.left:hover
+{
+    border: 1px solid white;
+    padding: 3px;
+    width: auto;
+    height: auto;
+}
+.book:hover,
+.seller:hover,
+.mobile:hover,
+.deals:hover,
+.electronic:hover {
+    border: 1px solid white;
+    padding: 5px;
+    width: auto;
+    height: auto;
+
+}
