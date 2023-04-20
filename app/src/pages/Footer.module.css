@@ -3,12 +3,26 @@
     width: 100%;
     min-height: 200px;
     color: antiquewhite;
+    font-weight: lighter;
 }
 
 .top{
-    background-color: darkblue;
+    background-color: #004B91;
     min-width:60px;
-    justify-content: center;
-    align-items: center;
+    width: 100%;
+   justify-content: center;
+   height: 40px;
+   
     display: flex;
+    
+    cursor: pointer;
 }
+
+.top h1{
+  
+    align-items: center;
+    
+    font-size: smaller;
+    padding-top: 15px;
+}
+
