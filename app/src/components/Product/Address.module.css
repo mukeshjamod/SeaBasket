@@ -1,0 +1,55 @@
+.address{
+    
+    background-color: rgb(107, 83, 83);
+    color: rgb(228, 228, 176);
+    border: 1px solid #cc5858;
+    width: 480px;
+    height: 500px;
+    justify-content: center;
+    text-align: justify;
+     display: grid;
+     margin: auto;
+    
+     box-shadow: 1px solid rgb(239, 239, 11);
+
+}
+
+.address input{
+display: flex;
+margin-bottom: 3px;
+
+margin-top: 10px;
+}
+
+.add{
+border-radius: 4px;
+width: 100px;
+
+background-color: aquamarine;
+}
+
+.edit{
+    display: flex;
+background-color: blue;
+width: 100px;
+border-radius: 5px;
+}
+
+.edit:hover{
+    background-color: rgb(235, 224, 224);
+}
+
+.add:hover{
+    background-color: azure;
+}
+.deliver{
+    background-color: rgb(199, 172, 33);
+    display: flex;
+    width: 150px;
+    margin-top: 2px;
+    margin-bottom:2px ;
+}
+
+.deliver:hover{
+    background-color: aliceblue;
+}

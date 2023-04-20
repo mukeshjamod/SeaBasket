@@ -1,0 +1,357 @@
+.slideshow {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 1500px;
+  }
+  
+  .slideshowSlider {
+    white-space: nowrap;
+    transition: ease 1000ms;
+    
+  }
+  
+  .slide {
+    display: inline-block;
+  
+    height: 500px;
+    width: 100%;
+    border-radius: 40px;
+  }
+  .slide img{
+    width: 100%;
+  
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1));
+    height: auto;
+  }
+  /* Buttons */
+  
+  .slideshowDots {
+    text-align: center;
+  }
+  
+  .slideshowDot {
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+  
+    cursor: pointer;
+    margin: 15px 7px 0px;
+  
+    background-color: #c4c4c4;
+  }
+  
+  .slideshowDot.active {
+    background-color: #6a0dad;
+  }
+
+
+
+/* * {
+    box-sizing: border-box;
+}
+
+#desktop-banner,
+.desktop-row {
+    width: 100%;
+}
+
+#desktop-banner {
+    max-width: 1500px;
+    margin: 0;
+}
+
+#gw-desktop-herotator.tall,
+#gw-desktop-herotator.tall .a-carousel-controls {
+    max-height: 230px;
+}
+
+#gw-desktop-herotator.tall {
+    z-index: 0;
+}
+
+#gw-desktop-herotator,
+#gw-desktop-herotator .a-carousel-viewport {
+    height: 300px;
+}
+
+#gw-desktop-herotator.tall .a-carousel-container {
+    overflow: visible;
+}
+
+.a-carousel-container {
+    position: relative;
+    overflow: hidden;
+}
+
+input,
+select,
+textarea {
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+    line-height: 19px;
+    color: #0F1111;
+}
+
+#gw-desktop-herotator.tall .a-carousel-controls {
+    max-height: 230px;
+}
+
+.a-row {
+    width: 100%;
+}
+
+.a-carousel-row-inner {
+    position: relative;
+    height: 100%;
+}
+
+element {
+    visibility: visible;
+    z-index: 10;
+}
+
+#gw-desktop-herotator.tall .a-carousel-left,
+#gw-desktop-herotator.tall .a-carousel-right {
+    max-height: 250px;
+}
+
+.a-carousel-rounded-buttons .a-carousel-left,
+.a-carousel-rounded-buttons .a-carousel-right {
+    width: 80px;
+    position: absolute;
+}
+
+.a-carousel-rounded-buttons .a-carousel-goto-nextpage,
+.a-carousel-rounded-buttons .a-carousel-goto-prevpage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    outline: 0;
+    border-radius: 5px;
+}
+
+.a-carousel-rounded-buttons .a-icon-next-rounded,
+.a-carousel-rounded-buttons .a-icon-previous-rounded {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.a-icon.a-icon-previous-rounded {
+    background-position: 0 0;
+}
+
+.a-icon.a-icon-next-rounded,
+.a-icon.a-icon-previous-rounded {
+    background-size: 68px 52px;
+    width: 34px;
+    height: 52px;
+    outline: 0;
+}
+
+
+
+.a-icon {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.a-icon {
+    background-image: url(https://m.media-amazon.com/images/S/sash/McBZv0ZvnbehkIx.png);
+    -webkit-background-size: 400px 900px;
+    background-size: 400px 900px;
+    background-repeat: no-repeat;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+.a-carousel-has-buttons.a-carousel-overlay-buttons .a-carousel-center {
+    margin: 0;
+}
+
+.a-carousel-has-buttons .a-carousel-center {
+    margin: 0 40px;
+}
+
+.a-carousel-center {
+    overflow: hidden;
+}
+
+.a-carousel-col {
+    overflow: visible;
+    min-height: 1px;
+    position: relative;
+    zoom: 1;
+}
+
+element {
+
+    height: 600px;
+
+}
+
+#gw-desktop-herotator.tall .a-carousel-viewport {
+
+    height: auto !important;
+
+}
+
+#gw-desktop-herotator,
+#gw-desktop-herotator .a-carousel-viewport {
+
+    height: 300px;
+
+}
+
+.a-carousel-viewport {
+
+    width: 100%;
+    overflow: hidden;
+
+}
+
+element {
+    width: 8000px;
+    transform: translateX(-3000px) translateZ(0px);
+}
+
+ol.a-carousel {
+    margin: 0;
+    list-style-type: none;
+    height: 100%;
+    white-space: nowrap;
+    overflow-x: visible;
+    color: #0F1111;
+    letter-spacing: -4px;
+}
+
+.a-ordered-list,
+.a-unordered-list,
+ol,
+ul {
+    padding: 0;
+}
+
+element {
+    visibility: hidden;
+    width: 1000px;
+    margin: 0px;
+}
+
+.a-carousel-display-single .a-carousel-card {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+}
+
+.a-carousel-card {
+    vertical-align: top;
+    text-align: left;
+    overflow: hidden;
+    margin-left: 16px;
+    width: 160px;
+    min-height: 100%;
+    list-style-type: none;
+    display: inline-block;
+    white-space: normal;
+    letter-spacing: normal;
+}
+
+.a-ordered-list li,
+.a-unordered-list li,
+ol li,
+ul li {
+    word-wrap: break-word;
+    margin: 0;
+}
+
+.a-ordered-list li,
+ol li {
+    list-style: decimal;
+    list-style-type: decimal;
+}
+
+.scalable-image-map a.a-link-normal {
+    display: inline-block;
+}
+
+
+
+.a-carousel-display-single .a-carousel-card img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+img {
+    vertical-align: top;
+}
+
+
+element {
+    visibility: visible;
+    z-index: 10;
+}
+
+#gw-desktop-herotator.tall .a-carousel-left,
+#gw-desktop-herotator.tall .a-carousel-right {
+    max-height: 250px;
+}
+
+.a-carousel-rounded-buttons .a-carousel-left,
+.a-carousel-rounded-buttons .a-carousel-right {
+    width: 80px;
+    position: absolute;
+}
+
+.a-carousel-rounded-buttons .a-carousel-goto-nextpage,
+.a-carousel-rounded-buttons .a-carousel-goto-prevpage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    outline: 0;
+    border-radius: 5px;
+}
+
+
+.a-carousel-rounded-buttons .a-icon-next-rounded,
+.a-carousel-rounded-buttons .a-icon-previous-rounded {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.a-icon.a-icon-next-rounded {
+    background-position: -34px 0;
+}
+
+.a-icon.a-icon-next-rounded,
+.a-icon.a-icon-previous-rounded {
+    background-size: 68px 52px;
+    width: 34px;
+    height: 52px;
+    outline: 0;
+}
+
+.a-icon.a-icon-next-rounded,
+.a-icon.a-icon-previous-rounded {
+    background-image: url(https://m.media-amazon.com/images/S/sash/ydDD9hnRfziI$y7.png);
+}
+
+.a-icon {
+    display: inline-block;
+    vertical-align: top;
+} */

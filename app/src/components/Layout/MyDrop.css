@@ -1,0 +1,28 @@
+.menu {
+   border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+ max-height: 200px;
+  display: flex;
+   z-index: 1200;
+  opacity: 1;
+  overflow: scroll;
+}
+
+.item {
+  font-size: 14px;
+  padding: 8px 16px;
+  margin: 0%;
+  color: #0b0a0a;
+  
+}
+ .item:hover {
+  background-color:red;
+  color: aliceblue;
+  /* color: #f5f3f3; */
+
+}
+/* #toggle:focus{
+  box-shadow: chocolate;
+border-color: chocolate;
+} */

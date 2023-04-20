@@ -1,0 +1,170 @@
+#hmenu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-family: "Amazon Ember", Arial, sans-serif;
+  visibility: visible;
+  z-index: 100000;
+}
+
+#hmenu-container div {
+  display: flex;
+}
+
+#hmenu-container #hmenu-canvas-background.hmenu-dark-bkg-color {
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.nav-sprite,
+.nav-sprite-v1 .nav-icon {
+  background-image: url(https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png);
+  background-position: 0 1000px;
+  background-repeat: repeat-x;
+}
+
+.hmenu-close-icon {
+  background-position: -190px -288px;
+  left: 380px;
+  top: 20px;
+  cursor: pointer;
+}
+
+#hmenu-container #hmenu-canvas #hmenu-content ul.hmenu.hmenu-visible {
+  visibility: visible;
+}
+
+#hmenu-container #hmenu-canvas #hmenu-content ul.hmenu {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+#hmenu-container.hmenu-visible {
+  visibility: visible;
+}
+
+.profile {
+  text-decoration: none;
+}
+
+#hmenu-customer-profile {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  padding-left: 35px;
+
+  color: rgb(247, 251, 251);
+}
+
+#hmenu-customer-profile:hover {
+  cursor: pointer;
+}
+
+.hmenu-visible {
+  list-style: none;
+
+}
+
+.hmenu-item {
+  text-decoration: none;
+  color: black;
+  margin-left: -30px;
+}
+
+.hmenu-item h2{
+  /* font-weight: 200; */
+  font: size 0.8em;
+}
+
+.hmenu-item:hover {
+  background-color: #eaeef2;
+  color: black;
+}
+
+
+#hmenu-customer-profile-right {
+  flex: 1;
+  overflow: hidden;
+}
+
+#hmenu-container #hmenu-canvas {
+  position: fixed;
+  background-color: #fff;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 4px 0 10px 0 rgba(0, 0, 0, .4);
+  will-change: transform;
+}
+
+#hmenu-customer-name {
+
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 19px;
+  max-width: 90%;
+  line-height: 25px;
+  color: #fff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#hmenu-container #hmenu-canvas-background.hmenu-opaque {
+  opacity: 1;
+}
+
+#hmenu-container #hmenu-canvas #hmenu-content {
+  position: relative;
+  overflow-x: hidden;
+  height: 100%;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+#hmenu-container #hmenu-canvas {
+  width: 365px;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+#hmenu-container #hmenu-canvas #hmenu-customer-profile {
+  background-color: #232f3e;
+  height: 50px;
+  align-items: center;
+}
+
+#hmenu-container #hmenu-canvas-background {
+  position: absolute;
+  will-change: opacity;
+  height: 100%;
+  width: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#hmenu-container #hmenu-canvas #hmenu-content ul.hmenu {
+  padding-top: 7px;
+  padding-bottom: 30px;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: scroll;
+  will-change: transform;
+  visibility: hidden;
+}
+
+#hmenu-container #hmenu-canvas #hmenu-content ul.hmenu li a.hmenu-item {
+  display: flex;
+}
+
+#hmenu-container #hmenu-canvas #hmenu-content ul.hmenu li .hmenu-item {
+  padding-right: 20px;
+  padding-left: 36px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}

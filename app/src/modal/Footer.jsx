@@ -17,9 +17,9 @@ const  FooterPage = ()=>{
          <div>
             <h3>Connect with Us</h3>
             <ul>
+              <li><a href="https://www.instagram.com/seaflux.tech/?hl=en">Instagram</a></li>
+              <li><a href="https://twitter.com/SeafluxTech">Twitter</a></li>
               <li><a href="/">Facebook</a></li>
-              <li><a href="/">Twitter</a></li>
-              <li><a href="/">Instagram</a></li>
             </ul>
           </div>
           <div>

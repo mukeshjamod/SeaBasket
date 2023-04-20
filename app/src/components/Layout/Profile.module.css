@@ -1,0 +1,10 @@
+.profile{
+    display: grid;
+    text-align: center;
+    background-color: violet;
+    color: beige;
+    
+    
+    margin: 10%;
+    padding: 10px;
+}

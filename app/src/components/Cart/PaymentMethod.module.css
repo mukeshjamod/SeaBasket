@@ -1,0 +1,70 @@
+.methods {
+    margin-bottom: 30px;
+    margin-left: 1px;
+    margin-top: 2px;
+    /* display: flex;
+    flex-flow: row; */
+    text-align: center;
+    color: rgb(10, 37, 37);
+    justify-content: first baseline;
+    border: 1px solid rgb(224, 211, 211);
+    background-color: rgb(228, 234, 234);
+  }
+  
+  .h2 {
+    margin-bottom: 10px;
+  }
+  
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .option {
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .option label {
+    cursor: pointer;
+  }
+  
+  .option input[type="radio"] {
+    display: none;
+  }
+  
+  .upi label:before {
+    content: "\f1c3";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 5px;
+  }
+  
+  .wallet label:before {
+    content: "\f53d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 5px;
+  }
+  
+  .card label:before {
+    content: "\f09d";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 5px;
+  }
+  
+  .netbanking label:before {
+    content: "\f19c";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 5px;
+  }
+  
+  .cod label:before {
+    content: "\f0d6";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 5px;
+  }
+  
