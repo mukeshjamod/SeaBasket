@@ -1,0 +1,60 @@
+.home{
+    /* max-width: 1500px; */
+    margin-left: auto;
+    width: 100%;
+    height: fit-content;
+    margin-right: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+.image{
+    width: 100%;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,1));
+}
+.row{
+    display: flex;
+   
+    margin-top: -10px;
+    margin-right: 5px; 
+    margin-left: 5px;
+}
+/* For screens larger than 1200px */
+@media (min-width: 1200px) {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .product {
+      width: 23%;
+    }
+  }
+  
+  /* For screens between 768px and 1200px */
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .product {
+      width: 31%;
+    }
+  }
+  
+  /* For screens smaller than 768px */
+  @media (max-width: 767px) {
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .product {
+      width: 48%;
+    }
+  }
+  

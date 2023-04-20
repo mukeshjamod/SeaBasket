@@ -1,7 +1,8 @@
 import React from 'react';
-import classes from './Home.module.css';
+import  './Home.css';
 import Product from '../components/Product/Product';
-
+ import MainCarousal from '../components/carousel/MainCarousal';
+// import carousal from '../components/carousel/MainCarousal';
 
 export const products = [{
   id: 1,
@@ -25,6 +26,14 @@ export const products = [{
   category: "book, power of your suspicious mind",
   rating: 4,
   image: "https://m.media-amazon.com/images/I/81QuI55xcdL._AC_UY218_.jpg"
+},
+{
+  id: 3,
+  title: "The Power of your suscpicious mind",
+  price: 54.65,
+  category: "book, power of your suspicious mind",
+  rating: 4,
+  image: "https://m.media-amazon.com/images/I/81QuI55xcdL._AC_UY218_.jpg"
 }
 ];
 const Home = () => {
@@ -32,13 +41,17 @@ const Home = () => {
 
 
   return (
-    <div className={classes.home}>
-      <img className={classes.image}
+    <div className="home">
+
+      <MainCarousal className="image"/>
+     
+      {/* <carousal/> */}
+      {/* <img className={classes.image}
         src='https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61aURrton0L._SX3000_.jpg' alt=''>
-      </img>
+      </img> */}
 
 
-      <div className={classes.row}>
+      <div className="row"  >
         {products.map((p) => (
           <Product
             key={p.id}
@@ -50,7 +63,7 @@ const Home = () => {
           />
         ))}
       </div>
-      <div className={classes.row}>
+      <div className="row">
         {products.map((p) => (
           <Product
             key={p.id}
@@ -62,7 +75,7 @@ const Home = () => {
           />
         ))}
       </div>
-      <div className={classes.row}>
+      <div className="row">
         {products.map((p) => (
           <Product
             key={p.id}
@@ -74,7 +87,7 @@ const Home = () => {
           />
         ))}
       </div>
-      <div className={classes.row}>
+      <div className="row">
         {products.map((p) => (
           <Product
             key={p.id}
