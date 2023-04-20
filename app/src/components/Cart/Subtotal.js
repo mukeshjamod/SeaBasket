@@ -8,12 +8,19 @@ import { Link,
 
 const Subtotal = () => {
 
+  const [{cart}] = useStateValue();
+  
   const getCartTotal = (cart) =>{
   return cart?.reduce((amount,item) =>item.price + amount, 0);
   }
 
-
-  const [{cart}] = useStateValue();
+const handleCheckoutClick = () =>{
+  if(isLoggedIn()){
+    props.history.push('/payment');
+  }else{
+    props.history.push('/login');
+  }
+}
 
 
   return ( <div className={classes.subtotal}>
@@ -28,11 +35,11 @@ const Subtotal = () => {
     thousandSeparator ={true}
     prefix={"$"}
     />
-   <Link to='/payment'>
-        <button className={classes.button} >Proceed to Checkout</button>
-   </Link>
+   
+        <button className={classes.button} onClick={handleCheckoutClick} >Proceed to Checkout</button>
+  
     </div>
   )
 }
 
-export default Subtotal;
+export default withRouter(Subtotal);

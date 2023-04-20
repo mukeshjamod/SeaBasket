@@ -15,7 +15,7 @@ const Login = () => {
     const loginHandler = async(event) =>{
         event.preventDefault();
 
-                console.log('jsk');
+               
         await signInWithEmailAndPassword(auth, useremail,userpassword)      
            .then((auth)=>{
             navigate('/');
@@ -41,7 +41,9 @@ const Login = () => {
 
     const forgotHandler = async(event) =>{
         event.preventDefault();
+         console.log('jay');
 
+         navigate('/');
         await sendPasswordResetEmail(auth,useremail)
         .then(()=>alert('password reset email sent successfully'))
         .catch((e) =>alert(e.message))
@@ -49,24 +51,26 @@ const Login = () => {
     
   return (
    <div className={classes.login}>
-    <Link>
-    <img className={classes.logo} src={logo} alt="logo"/>
-        </Link>
-    <div className={classes.container}>
-        <h1>Sign In</h1>
-        <form>
-            <h5>E-mail</h5>
-            <input value={useremail} onChange={event =>setUserEmail(event.target.value)} type='email'/>
-            <h5>Password</h5>
-            <input value={userpassword} onChange={event => setUserPassword(event.target.value)} type='password'></input>
-            <button onClick={loginHandler} type='submit' className={classes.buttonSign}>Sign In</button>
-            <button onClick={forgotHandler} type='forgot' className={classes.buttonSign}>ForgetPassword</button>
-        </form>
+   <Link to='/'>
+     <img className={classes.logo} src={logo} alt="logo"/>
+         </Link>
+     <div className={classes.container}>
+         <h1>Sign in</h1>
+         <form>
+             <h5>E-mail</h5>
+             <input className={classes.input} value={useremail} onChange={event =>setUserEmail(event.target.value)} type='email'/>
+             <h5>Password</h5>
+             <input className={classes.input} value={userpassword} onChange={event => setUserPassword(event.target.value)} type='password'></input>
+             <button onClick={loginHandler} type='submit' className={classes.buttonSign}>Sign In</button>
+             <button onClick={forgotHandler} type='forgot' className={classes.buttonSign}>ForgetPassword</button>
+         </form>
 
-        <p>By signing in, you agree to Seabasket's Terms and Conditons</p>
-        <button onClick={signupuser} className={classes.buttonCreate}>Create Your SeaBasket Account</button>
-    </div>
-   </div>
+         <p>By continuing, you agree to Amazon's <span style={{color:"#0066C0"}}>Conditions of Use</span> and <span style={{color:"#0066C0"}}>Privacy Notice.</span> </p>
+         <hr/>
+
+         <button onClick={signupuser} className={classes.buttonCreate}>Create Your SeaBasket Account</button>
+     </div>
+   </div> 
   )
 }
 

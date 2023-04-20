@@ -1,6 +1,6 @@
 .nav {
     background-color: rgb(49, 71, 76);
-    color: rgb(245, 247, 247);
+    color: rgb(12, 13, 13);
     height: 30px;
     display: flex;
     justify-content: space-between;
@@ -9,12 +9,26 @@
 .left {
     margin-left: 2px;
     display: flex;
+    background-color: black;
+    color: aliceblue;
     align-items: center;
+    justify-content: center;
 }
 
+button{
+    color: aliceblue;
+    border: none;
+    background-color: rgb(49, 71, 76);
+}
+
+button:hover{
+color: aliceblue;
+border: none;
+}
+/* 
 .left>.menu {
     color: rgb(242, 233, 233)
-}
+} */
 
 .deals {
     color: rgb(248, 253, 252);
@@ -40,22 +54,29 @@
     color: rgb(248, 253, 252);
     text-decoration: none;
 }
-
-.left:hover
-{
-    border: 1px solid white;
-    padding: 3px;
-    width: auto;
-    height: auto;
+.shoes{
+    color: aliceblue;
+    text-decoration: none;
 }
+
 .book:hover,
 .seller:hover,
 .mobile:hover,
 .deals:hover,
-.electronic:hover {
-    border: 1px solid white;
-    padding: 5px;
+.electronic:hover,
+.shoes:hover {
+    border: 1px solid rgb(250, 248, 248);
+      padding: 2px;
     width: auto;
     height: auto;
+    color: aliceblue;
 
+}
+.left:hover
+{
+    border: 1px solid rgb(245, 240, 240);
+    padding: 2px;
+    color: aliceblue;
+    width: auto;
+    height: auto;
 }

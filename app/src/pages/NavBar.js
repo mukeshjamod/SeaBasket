@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CgMenu } from 'react-icons/cg';
 import classes from './NavBar.module.css';
 import { Link } from 'react-router-dom';
+import OffCanvasMenu from '../components/Layout/OffCanvasMenu';
 
 const NavBar = () => {
+   const[isMenuOpen , setIsMenuOpen] = useState(false);
+   
+const toggleMenu = () =>{
+  setIsMenuOpen(!isMenuOpen);
+};
+
   return (
+    
     <div className={classes.nav}>
-      <div className={classes.left}>
-        <Link className={classes.menu}>
-          <CgMenu size={20} /></Link>
-        <span>All</span> </div>
+      <div className={classes.left}>    
+        <button onClick={toggleMenu}>
+          <CgMenu size={20} /> 
+            <span>All</span> 
+          </button>
+        </div>
+        {isMenuOpen && <OffCanvasMenu onClose={()=>setIsMenuOpen(false)}/>}
+
       <Link className={classes.seller}>
         <div >Best Sellers</div>
       </Link>
@@ -19,6 +31,9 @@ const NavBar = () => {
       <Link className={classes.mobile}>
         <div >Mobiles</div>
       </Link>
+      <Link className={classes.shoes}>
+        <div>Shoes</div>
+      </Link>
       <Link className={classes.electronic}>
         <div >Electronic</div>
       </Link>
@@ -26,10 +41,9 @@ const NavBar = () => {
         <div >Today's Deals</div>
       </Link>
 
-
-
-    </div>
-  )
+    </div>)
+      
+   
 }
 
 export default NavBar;

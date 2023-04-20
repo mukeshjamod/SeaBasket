@@ -7,17 +7,27 @@ import classes from './SingleProduct.module.css';
 const ProductPage = ({ product }) => {
 
   return (
+    <div className="row">
     <div className={classes.single}>
-    <>  
+    
+<div style={{maxHeight:309,maxWidth:309}} className={classes.leftCol}>
+
      <img className={classes.image} src={product.image} alt={product.title}></img>
-      <h1 className={classes.title}>{product.title}</h1>
+</div>
+
+<div className={classes.leftCenterCol}>
+  <h1 className={classes.title}>{product.title}</h1>
+  </div>      
+<div className={classes.rightCol}>
+
       <p className={classes.rating}>{product.rating}</p>
       <p className={classes.price}>price: ${product.price}</p>
    
-    </>
+</div>
+    
     </div>
 
-
+    </div>
 
   );
 };
@@ -34,8 +44,10 @@ const SingleProduct = () => {
   }
 
   return (
-
-    <ProductPage product={product} />
+    <div id='dp' className={classes.container}>
+       <ProductPage product={product} />
+    </div>
+   
 
   )
 };
