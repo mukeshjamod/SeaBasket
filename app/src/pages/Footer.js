@@ -9,10 +9,13 @@ function Footer() {
 
   const backhandler = (event) =>{
 event.preventDefault();
-
-
 document.documentElement.scrollTop = 0;
-  }
+
+}
+let day = new Date(),
+date = day.getFullYear();
+
+
   return (
     // <FooterPage></FooterPage>
     <div className={classes.footer}>
@@ -25,7 +28,12 @@ document.documentElement.scrollTop = 0;
          <FooterPage></FooterPage>
          <FooterEndPage/>
         </div>
-          
+        <hr/>
+        
+        <div className="row footerContentDiv">
+          <p className='d-flex justify-content-center'>conditions of Use & Sale Privacy Notice Interest-Based Ads</p>
+          <p className='footerContentText d-flex justify-content-center'>© 1996-{date}, Seabasket.com, Inc. or its affiliates</p>
+        </div>
       </div>
       </div>
   );
