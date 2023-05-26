@@ -1,0 +1,255 @@
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+  
+
+.seafluxLogoDiv{
+    /* width: 15%; */
+    height: 75px;
+}
+
+.seafluxlogo{
+    position: fixed;
+    cursor: pointer;
+}
+.category {
+    background-color: aqua;
+    margin-top: 50px;
+    list-style: none;
+}
+
+
+
+.search {
+    display: flex;
+}
+
+
+
+.dropdown:hover {
+    background-color: rgb(194, 197, 197);
+}
+
+.dropdown:focus-within {
+    border-color: 3px brown;
+    box-shadow: tomato;
+}
+
+.searchIcon {
+    color: black;
+    background-color: rgb(233, 178, 107);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+
+    align-items: center;
+    padding-bottom: 2px;
+    cursor: pointer;
+    margin: auto;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.userIcon {
+    color: rgb(242, 245, 248);
+}
+
+
+.userIcon:hover {
+    color: yellow;
+    border: 1px solid white;
+    padding: 10px;
+
+}
+
+.link:hover {
+    border: 1px solid white;
+    padding: 10px;
+    color: aliceblue;
+
+}
+
+
+.link {
+    color: azure;
+    text-decoration: none;
+
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    color: rgb(254, 255, 252);
+    justify-content: center;
+
+}
+
+.icon:hover {
+    border: 1px solid white;
+    padding: 10px;
+}
+
+.count {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.search {
+    padding: 1px;
+    box-sizing: border-box;
+}
+
+.search:focus-within {
+    box-shadow: 2px rgb(233, 180, 5);
+    border-color: rgb(220, 165, 37);
+}
+
+
+/* Media query for tablets and smaller screens */
+@media screen and (max-width:700px) {
+    .header {
+        flex-wrap: wrap;
+        padding: 10px;
+    }
+
+    /* .logo img {
+        margin-bottom: 10px;
+    } */
+
+    .search input {
+        width: 100%;
+        max-width: 100px;
+    }
+
+
+    .search {
+        flex-grow: 1;
+        margin-right: 50px;
+    }
+
+    .dropdown {
+        display: none;
+    }
+
+    
+
+    .option {
+        flex-direction: row;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .count {
+        display: none;
+    }
+}
+
+
+
+
+
+.logo img:hover {
+    border: 1px solid white;
+}
+
+.category {
+    background-color: aqua;
+    margin-top: 50px;
+    list-style: none;
+}
+
+.search input {
+    width: 900px;
+    height: 40px;
+    border: none;
+}
+
+.dropdown {
+    color: rgb(157, 136, 136);
+    background-color: whitesmoke;
+    width: 50px;
+    display: flex;
+    height: 40px;
+    margin-top: 60px;
+    cursor: pointer;
+    border-right: 1px solid;
+    justify-content: center;
+    margin: auto;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-bottom: 2px;
+    align-items: center;
+    font-size: small;
+}
+
+.dropdown:hover {
+    background-color: rgb(194, 197, 197);
+}
+
+.dropdown:focus {
+    border-color: 3px brown;
+    box-shadow: tomato;
+}
+
+.searchIcon {
+    color: black;
+    background-color: rgb(233, 178, 107);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.navSignInBtn{
+    display: block;
+    height: 33px;
+    cursor: pointer;
+    outline: 0;
+    border: 1px solid;
+    border-color: #c89411 #b0820f #99710d;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: inset 0 1px 0 0 #fcf3dc;
+    background: -webkit-linear-gradient(top,#f8e3ad,#EEBA37);
+    text-align: center;
+    line-height: 31px;
+    color: #111;
+    text-decoration: none;
+    line-height: 30px;
+    font-size: 13px;
+    width: 5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navTextDivAccount:hover{
+    display: block;
+}
+.navSignInDiv{
+    width: 8rem;
+    height: 4rem;
+    background-color: #fff;
+    margin-left: -0.5rem;
+    margin-top: 1rem;
+    z-index: 10000;
+    position: relative;
+    box-shadow: 0 2px 4px 0 rgb(0 0 0 / 13%);
+    overflow: visible;
+    border: 1px solid #bbb;
+    border-radius: 3px 3px 3px 3px;
+}
+.navTex{
+    color: #fff;
+    border: none;
+}

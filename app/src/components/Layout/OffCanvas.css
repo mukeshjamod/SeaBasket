@@ -19,16 +19,16 @@
 
 .nav-sprite,
 .nav-sprite-v1 .nav-icon {
-  background-image: url(https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-1x-hm-dsk-reorg._CB405936311_.png);
-  background-position: 0 1000px;
-  background-repeat: repeat-x;
+    margin-left: 360px;
+    margin-top: 0;
+  
 }
 
 .hmenu-close-icon {
-  background-position: -190px -288px;
-  left: 380px;
-  top: 20px;
   cursor: pointer;
+  display: flex;
+ 
+  align-items: start;
 }
 
 #hmenu-container #hmenu-canvas #hmenu-content ul.hmenu.hmenu-visible {

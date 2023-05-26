@@ -1,3 +1,4 @@
+import React from 'react';
 import {initializeApp} from 'firebase/app';
 // import 'firebase/firestore';
 
@@ -5,6 +6,8 @@ import {getAuth} from 'firebase/auth';
 
 import { getFirestore } from 'firebase/firestore';
 
+
+ 
 
    const firebaseConfig = {
   // your Firebase project's configuration here
@@ -19,9 +22,21 @@ import { getFirestore } from 'firebase/firestore';
 
  const app = initializeApp(firebaseConfig);
 
-export const db = getFirestore(app);
-export const auth = getAuth(app);
+ const db = getFirestore(app);
+ const auth = getAuth(app);
+ 
+ export const FirebaseContext = React.createContext({db,auth});
 
+export const FirebaseProvider = ({children }) =>{
+
+  return (
+   <FirebaseContext.Provider value={{db,auth}}>
+     {children}
+   </FirebaseContext.Provider>
+  )
+}
+
+ 
 
 
 

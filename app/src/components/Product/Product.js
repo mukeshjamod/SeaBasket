@@ -2,9 +2,12 @@ import React from 'react';
 import classes from  './Product.module.css';
 import { useStateValue } from '../../store/CartProvider';
 import { NavLink } from 'react-router-dom';
+import { toast } from "react-toastify";
+
 
 const Product = ({id,title,image,price,rating}) => {
-  const [{cart}, dispatch] = useStateValue();
+  const [{cart},dispatch] = useStateValue();
+
   const addToCart = () =>{
     dispatch({
     type: 'ADD',
@@ -16,8 +19,10 @@ const Product = ({id,title,image,price,rating}) => {
       rating:rating
     }
     })
-    
-  }
+    toast.success("Item added to cart successfully",{position: toast.POSITION.TOP_RIGHT});
+    console.log(toast)
+  };
+
   return (
     <div className={classes.product}>
         <div className={classes.info}>

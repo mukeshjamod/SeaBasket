@@ -4,7 +4,7 @@
     max-width: 400px;
     min-width: 200px;
      margin: 10px;
-     background-color: aliceblue;
+     background-color:white;
      z-index: 1;
      width: 100%;
      padding: 20px;
@@ -36,7 +36,7 @@
 }
 
 .product > button{
-    background-color: rgb(176, 164, 86);
+    background-color: rgb(232, 181, 53);
     border: 1px solid;
     border-color: chartreuse;
 }

@@ -14,13 +14,13 @@ const toggleMenu = () =>{
   return (
     
     <div className={classes.nav}>
-      <div className={classes.left}>    
+      <div id="humbergerMenu" className={classes.left}>    
         <button onClick={toggleMenu}>
           <CgMenu size={20} /> 
             <span>All</span> 
           </button>
         </div>
-        {isMenuOpen && <OffCanvasMenu onClose={()=>setIsMenuOpen(false)}/>}
+        {isMenuOpen && <OffCanvasMenu />}
 
       <Link className={classes.seller}>
         <div >Best Sellers</div>

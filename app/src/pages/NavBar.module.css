@@ -6,13 +6,26 @@
     justify-content: space-between;
     align-items: center;
 }
-.left {
+/* .left {
     margin-left: 2px;
     display: flex;
     background-color: black;
     color: aliceblue;
     align-items: center;
     justify-content: center;
+} */
+#humbergerMenu{
+    display: flex;
+    position: static;
+    float:none;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    border:none;
+    text-decoration: none;
+    padding: 8px 9px 8px 9px;
+    margin: 0;
 }
 
 button{
@@ -75,7 +88,7 @@ border: none;
 .left:hover
 {
     border: 1px solid rgb(245, 240, 240);
-    padding: 2px;
+    padding: 1px;
     color: aliceblue;
     width: auto;
     height: auto;

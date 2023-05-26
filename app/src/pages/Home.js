@@ -15,14 +15,14 @@ export const products = [{
   id: 2,
   title: "The puma shoes",
   category: "footwear, shoes, puma",
-  price: 54.65,
+  price: 154.65,
   rating: 4,
   image: "https://images-eu.ssl-images-amazon.com/images/G/31/img22/Fashion/Gateway/BAU/BTF-Refresh/May/PF_MF/MF-2-186-116._SY116_CB636110853_.jpg"
 
 }, {
   id: 3,
   title: "The Power of your suscpicious mind",
-  price: 54.65,
+  price: 51.65,
   category: "book, power of your suspicious mind",
   rating: 4,
   image: "https://m.media-amazon.com/images/I/81QuI55xcdL._AC_UY218_.jpg"
@@ -50,8 +50,35 @@ const Home = () => {
         src='https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61aURrton0L._SX3000_.jpg' alt=''>
       </img> */}
 
-
-      <div className="row"  >
+      
+        <div className='rowPosterContainer'>
+        <div className='divRow'>
+        <div className='gw-card-layout d-flex justify-content-center'>
+          {products.map((p) => (
+          <Product
+            key={p.id}
+            id={p.id}
+            title={p.title}
+            price={p.price}
+            rating={p.rating}
+            image={p.image}
+          />
+        ))}
+      </div>
+      <div className="gw-card-layout d-flex justify-content-center">
+        {products.map((p) => (
+          <Product
+            key={p.id}
+            id={p.id}
+            title={p.title}
+            price={p.price}
+            rating={p.rating}
+            image={p.image}
+          />
+        ))}
+      </div> 
+     
+      <div className="gw-card-layout d-flex justify-content-center">
         {products.map((p) => (
           <Product
             key={p.id}
@@ -63,7 +90,8 @@ const Home = () => {
           />
         ))}
       </div>
-      <div className="row">
+       {/*
+      <div className="gw-card-layout d-flex justify-content-center">
         {products.map((p) => (
           <Product
             key={p.id}
@@ -74,31 +102,10 @@ const Home = () => {
             image={p.image}
           />
         ))}
+      </div> */}
       </div>
-      <div className="row">
-        {products.map((p) => (
-          <Product
-            key={p.id}
-            id={p.id}
-            title={p.title}
-            price={p.price}
-            rating={p.rating}
-            image={p.image}
-          />
-        ))}
-      </div>
-      <div className="row">
-        {products.map((p) => (
-          <Product
-            key={p.id}
-            id={p.id}
-            title={p.title}
-            price={p.price}
-            rating={p.rating}
-            image={p.image}
-          />
-        ))}
-      </div>
+ 
+    </div>
     </div>
   )
 }

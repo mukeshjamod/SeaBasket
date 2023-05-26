@@ -1,17 +1,43 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logo from '../images/logo.png';
-import classes from './Header.module.css';
+import './Header.css';
 import MyDropdownButton from './MyDropdownButton';
 import { FaUser, FaSearch, FaShoppingCart } from 'react-icons/fa';
 import { useStateValue } from '../../store/CartProvider';
+import { FirebaseContext } from '../../Firebase';
+import { useContext, useEffect, useState } from 'react';
+import { signOut } from 'firebase/auth';
 // import BasicButton from './DropDown';
 
-  // import { MdArrowDropDown } from 'react-icons/md';
+// import { MdArrowDropDown } from 'react-icons/md';
 // import Dropdown from './Dropdown';
 
 
 function Header() {
   const [{ cart }] = useStateValue();
+  const { auth } = useContext(FirebaseContext);
+  const navigate = useNavigate();
+
+
+  const signOutHandler = () => {
+   signOut(auth);
+    navigate('/');
+  };
+
+  const [userEmail, setUserEmail] = useState('');
+  console.log('logout')
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        const email = user.email.split("@")[0];
+        setUserEmail(email);
+      } else {
+        setUserEmail('');
+      }
+    })
+    return unsubscribe;
+  }, [auth])
+  console.log('user')
 
   // const options = [
   // {value:'green', label:'green'},
@@ -22,38 +48,94 @@ function Header() {
 
 
   return (
-    <nav className={classes.header}>
-      <Link to='/'><div className={classes.logo}>
-      <img src={logo} width={90} height={77} alt="logo" />
-    </div>
-    </Link>
+    <nav className="header d-flex navbar navbar bg-dark justify-content-between position-sticky">
+      <Link to='/'><div className="seafluxLogoDiv">
+        <img src={logo} alt="logo" width={90} height={83} className="Seafluxlogo" />
+      </div>
+      </Link>
 
-      <div className={classes.search}>
-        <div className={classes.dropdown}> 
-         
-        
-         <MyDropdownButton/>
-           {/* <MdArrowDropDown size={20} /> */}
+      <div className="search  col-md-6 col-sm-4">
+        <div className="dropdown">
+
+
+          <MyDropdownButton />
+          {/* <MdArrowDropDown size={20} /> */}
           {/* <Dropdown options={options}/> */}
 
         </div>
-        <input style={{fontSize:14, paddingLeft:10,}} type="text" placeholder="Search Seabasket.in" />
+        <input className="" style={{ fontSize: 14, paddingLeft: 10 }} type="text" placeholder="Search Seabasket.in" />
 
-        <div className={classes.searchIcon}><FaSearch size={25} /></div>
+        <div className="searchIcon"><FaSearch size={20} /></div>
       </div>
 
-      <Link to='/profile' className={classes.userIcon}><FaUser size={25} /></Link>
+      <Link to='/profile' className="userIcon d-flex "><FaUser size={25} /></Link>
 
-      <Link to='/login' className={classes.link}>
-        <div className={classes.option}>
-          <span>Hello, Sing in</span>
+      <div className="navTextDivAccount">
+        
+          <p className="navTex">
+            Hello, {userEmail ? userEmail : "Sign in"} <br />
 
-        </div>
-      </Link>
+            <i class="fas fa-caret-down"></i>
+          </p>
+       
+        <ul className="dropdown-content">
+          {userEmail ? (
+            <div className="navSignOutDiv">
+              <br />
+              <div className="navSignOutContainer">
+                <p className="navSignOutTitle">Your Account</p>
+                <p
+                  className="navSignOutYourAccount"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/login");
+                  }}
+                >
+                  Your Account
+                </p>
+                <p
+                  className="navSignOutWishList"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/cart/:id");
+                  }}
+                >
+                  Your Wish List
+                </p>
+                <p
+                  className="navSignOutOrders"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigate("/");
+                  }}
+                >
+                  Your Orders
+                </p>
+                <p className="navSignOutSignOut" onClick={signOutHandler}>
+                  Sign Out
+                </p>
+              </div>
+            </div>
+          ) : (
+            <div className="navSignInDiv">
+              <br />
+              <button
+                className="navSignInBtn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate("/login");
+                }}
+              >
+                Sign in
+              </button>
+            </div>
+          )}
+        </ul>
+      </div>
       <Link to='/checkout'>
-        <div className={classes.icon}>
+        <div className="icon">
           <FaShoppingCart size={25} />
-          <span className={classes.count}>{cart.length}</span>
+          <span className="count">{cart.length}</span>
         </div>
       </Link>
     </nav>

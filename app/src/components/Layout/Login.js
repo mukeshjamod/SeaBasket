@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import classes from './Login.module.css';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../images/logo1.png';
-import {auth} from '../../Firebase';
+
 import {createUserWithEmailAndPassword, sendPasswordResetEmail, signInWithEmailAndPassword } from 'firebase/auth';
+import { FirebaseContext } from '../../Firebase';
 
 const Login = () => {
 
     const navigate = useNavigate();
     const[useremail,setUserEmail]=useState('');
     const[userpassword, setUserPassword] = useState('');
+    const{auth} = useContext(FirebaseContext);
 
  
     const loginHandler = async(event) =>{
@@ -41,10 +43,8 @@ const Login = () => {
 
     const forgotHandler = async(event) =>{
         event.preventDefault();
-         console.log('jay');
-
-         navigate('/');
-        await sendPasswordResetEmail(auth,useremail)
+        
+        await sendPasswordResetEmail(auth,useremail.valueOf())
         .then(()=>alert('password reset email sent successfully'))
         .catch((e) =>alert(e.message))
     }
@@ -60,9 +60,9 @@ const Login = () => {
              <h5>E-mail</h5>
              <input className={classes.input} value={useremail} onChange={event =>setUserEmail(event.target.value)} type='email'/>
              <h5>Password</h5>
-             <input className={classes.input} value={userpassword} onChange={event => setUserPassword(event.target.value)} type='password'></input>
+             <input className={classes.input} value={userpassword} onChange={event => setUserPassword(event.target.value)} type='password' />
              <button onClick={loginHandler} type='submit' className={classes.buttonSign}>Sign In</button>
-             <button onClick={forgotHandler} type='forgot' className={classes.buttonSign}>ForgetPassword</button>
+             <button onClick={forgotHandler} type='submit' className={classes.buttonSign}>Forget Password</button>
          </form>
 
          <p>By continuing, you agree to Amazon's <span style={{color:"#0066C0"}}>Conditions of Use</span> and <span style={{color:"#0066C0"}}>Privacy Notice.</span> </p>

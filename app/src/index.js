@@ -5,6 +5,7 @@ import App from './App';
  import 'bootstrap/dist/css/bootstrap.min.css';
 import CartProvider from './store/CartProvider';
 import cartReducer, { initialState } from './store/CartReducer';
+import { FirebaseProvider } from './Firebase';
 
 
 
@@ -13,9 +14,11 @@ import cartReducer, { initialState } from './store/CartReducer';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <FirebaseProvider>
     <CartProvider initialState={initialState} reducer={cartReducer}>
       <App/>
     </CartProvider>
+    </FirebaseProvider>
   </React.StrictMode>
 );
 
